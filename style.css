@@ -9,12 +9,36 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+:root{
+    --blue-main: #6baefb;
+    --blue-button-hover: #529cef;
+}
 header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 4%;
-    background: #6baefb;
+    padding: 1rem 2%;
+    background: var(--blue-main);
+}
+section{
+    padding: 2rem 5%;
+}
+.btn{
+    text-decoration: none;
+    color: #fff;
+    background: var(--blue-main);
+    padding: 1.2rem 3.7rem;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.btn:hover{
+    background: var(--blue-button-hover);
 }
 header .logo i{
     font-size: 2.8rem;
@@ -26,8 +50,12 @@ header .logo span{
 }
 header nav a{
     font-size: 2.3rem;
-    margin: 0 1.8rem;
+    padding: 1.4rem 1.8rem;
     font-weight: 700;
+    transition: all .3s ease;
+}
+header nav a:hover{
+    background: var(--blue-button-hover);
 }
 header a{
     text-decoration: none;
@@ -38,4 +66,58 @@ header .close{
 }
 header .menu{
     display: none;
+}
+.home{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    gap: 10rem;
+    padding-top: 15rem;
+    position: relative;
+}
+.home .image{
+    width: 50%;
+    height: 40.1rem;
+    border-radius: 1rem;
+}
+.home .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+.home .content{
+    width: 40%;
+}
+.home .content h2{
+    font-size: 2.4rem;
+}
+.home .content p{
+    font-size: 1.4rem;
+    margin: 6rem 0;
+}
+.home .prev-btn{
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.home .prev-btn:hover{
+    color: var(--blue-main);
+}
+.home .next-btn{
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.home .next-btn:hover{
+    color: var(--blue-main);
 }
