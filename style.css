@@ -17,6 +17,9 @@ header{
     position: fixed;
     width: 100%;
     z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,4 +124,61 @@ header .menu{
 }
 .home .next-btn:hover{
     color: var(--blue-main);
+}
+hr{
+    border: none;
+    background: #c6c5c5;
+    height: .1rem;
+    width: 90%;
+    margin: 2rem auto;
+}
+.top-services h2{
+    position: relative;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+}
+.top-services h2::after{
+    content: "";
+    position: absolute;
+    width: 11.4rem;
+    height: .4rem;
+    background: var(--blue-main);
+    bottom: 0;
+    left: 0;
+}
+.top-services .top-service-container{
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32.5rem, 1fr));
+    gap: 2rem;
+}
+.top-services .top-service-container .box{
+    border: .2rem solid #c3c1c1;
+    border-radius: 1rem;
+    width: 32.5rem;
+    padding: 1rem;
+    box-shadow: .8rem .8rem 1rem rgba(0,0,0,.16);
+}
+.top-services .top-service-container .box .image{
+    height: 20.2rem;
+}
+.top-services .top-service-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.top-services .top-service-container .box h3{
+    margin: 1.6rem 0;
+    font-size: 2.1rem;
+    color: var(--blue-main);
+}
+.top-services .top-service-container .box p{
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+.top-services .btn{
+    display: inline-block;
+    margin-top: 5rem;
 }
