@@ -24,6 +24,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2%;
+    padding-right: 0;
     background: var(--blue-main);
 }
 section{
@@ -43,19 +44,50 @@ section{
 .btn:hover{
     background: var(--blue-button-hover);
 }
+.box-container{
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32.5rem, 1fr));
+    gap: 2rem;
+}
+.box-container .box{
+    border: .2rem solid #c3c1c1;
+    border-radius: 1rem;
+    width: 36.5rem;
+    padding: 1rem;
+    box-shadow: .8rem .8rem 1rem rgba(0,0,0,.16);
+}
+.box-container .box .image{
+    height: 20.2rem;
+}
+.box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box-container .box h3{
+    margin: 1rem 0;
+    font-size: 2.1rem;
+    color: var(--blue-main);
+}
+.box-container .box p{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    padding-bottom: 2.5rem;
+}
 header .logo i{
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     padding-right: 2rem;
     font-weight: 700;
 }
 header .logo span{
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 header nav a{
-    font-size: 2.3rem;
-    font-weight: 600;
-    padding: 1.4rem 1.8rem;
+    font-size: 1.8rem;
+    padding: 1.2rem 1.8rem;
     transition: all .3s ease;
 }
 header nav a:hover{
@@ -74,9 +106,8 @@ header .menu{
 .home{
     width: 100%;
     display: flex;
-    height: 100vh;
     gap: 10rem;
-    padding-top: 15rem;
+    margin-top: 15rem;
     position: relative;
 }
 .home .image{
@@ -147,41 +178,66 @@ hr{
     bottom: 0;
     left: 0;
 }
-.top-services .top-service-container{
-    margin: 0 auto;
-    margin-top: 5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32.5rem, 1fr));
-    gap: 2rem;
-}
-.top-services .top-service-container .box{
-    border: .2rem solid #c3c1c1;
-    border-radius: 1rem;
-    width: 32.5rem;
-    padding: 1rem;
-    box-shadow: .8rem .8rem 1rem rgba(0,0,0,.16);
-}
-.top-services .top-service-container .box .image{
-    height: 20.2rem;
-}
-.top-services .top-service-container .box .image img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.top-services .top-service-container .box h3{
-    margin: 1.6rem 0;
-    font-size: 2.1rem;
-    color: var(--blue-main);
-}
-.top-services .top-service-container .box p{
-    font-size: 1.5rem;
-    padding-bottom: 2rem;
-}
 .top-services .btn{
     display: inline-block;
     margin-top: 5rem;
 }
+/* Styling of the services page begins */
+.banner{
+    position: relative;
+    margin-top: 5rem;
+    height: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.2;
+}
+.banner h2{
+    position: absolute;
+    z-index: 100;
+    font-size: 4rem;
+}
+.banner h2 span{
+    padding-left: 1rem;
+    color: var(--blue-main);
+}
+.meal-services h2{
+    position: relative;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+.meal-services h2 span{
+    color: var(--blue-main);
+}
+.meal-services h2::after{
+    content: "";
+    position: absolute;
+    width: 11.4rem;
+    height: .4rem;
+    background: var(--blue-main);
+    bottom: 0;
+    left: 0;
+}
+.meal-services p{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: justify;
+}
+
 footer{
     background: #D5D5D5;
     margin-top: 5.3rem;
@@ -200,7 +256,7 @@ footer .footer-link-container .link-box h3{
     font-size: 2rem;
     color: var(--blue-main);
 }
-footer .footer-link-container .link-box a, p{
+footer .footer-link-container .link-box a, footer .footer-link-container .link-box p{
     text-decoration: none;
     color: #000;
     display: block;
