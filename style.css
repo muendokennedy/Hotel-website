@@ -37,6 +37,7 @@ section{
     padding: 1.2rem 3.7rem;
     font-size: 1.6rem;
     border-radius: 1rem;
+    outline: none;
     text-transform: capitalize;
     cursor: pointer;
     transition: all .3s ease;
@@ -210,7 +211,7 @@ hr{
     font-size: 4rem;
 }
 .banner h2 span{
-    padding-left: 1rem;
+    padding: 0 1rem;
     color: var(--blue-main);
 }
 .meal-services h2{
@@ -237,7 +238,158 @@ hr{
     line-height: 3rem;
     text-align: justify;
 }
-
+/* The start of the styling of the branches page */
+.branch-first p{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: justify;
+}
+.branch-second h2{
+    position: relative;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+}
+.branch-second h2 span{
+    color: var(--blue-main);
+}
+.branch-second h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: .4rem;
+    width: 11.4rem;
+    background: var(--blue-main);
+}
+.branch-second p{
+    padding: 3rem 0;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: justify;
+}
+.branch-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 30rem;
+}
+.branch-container .image{
+    width: 45%;
+    border: .1rem solid #707070;
+    border-radius: 1rem;
+    padding: .5rem;
+    box-shadow: .8rem .8rem 1rem rgba(0,0,0,.16);
+}
+.branch-container .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+.branch-container .content{
+    width: 48%;
+}
+.branch-container .content p{
+    padding-top: 0;
+}
+.branch-container .content .btn{
+    border: none;
+}
+.branch-line{
+    margin-top: 10rem;
+}
+/* Styling of the about page begins here */
+.about p, .team p, .feedback p{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: justify;
+}
+.team h2{
+    position: relative;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.team h2 span{
+    color: var(--blue-main);
+}
+.team h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: .4rem;
+    width: 11.4rem;
+    background: var(--blue-main);
+}
+.team .box .name{
+    color: var(--blue-main);
+    font-size: 2.2rem;
+    padding: 1.2rem 0;
+    border-bottom: .1rem solid #707070;
+    font-weight: 600;
+}
+.team .box .details{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    padding: 2rem 0;
+}
+.feedback h2{
+    position: relative;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.feedback h2 span{
+    color: var(--blue-main);
+}
+.feedback h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: .4rem;
+    width: 11.4rem;
+    background: var(--blue-main);
+}
+.feedback .box .image{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 100%;
+}
+.feedback .box .image img{
+    width: 15rem;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.feedback .rating-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-bottom: .1rem solid #707070;
+}
+.feedback .rating-box .name{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.feedback .rating-box i{
+    font-size: 1.5rem;
+    color: var(--blue-main);
+}
+.feedback .box .details{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    padding: 2rem 0;
+}
 footer{
     background: #D5D5D5;
     margin-top: 5.3rem;
