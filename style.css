@@ -506,6 +506,52 @@ form .submit button{
     font-size: 2.2rem;
     font-weight: 600;
 }
+.contact-description .contact-details .map iframe{
+    width: 100%;
+    height: 60rem;
+    margin-top: 4rem;
+}
+/* Responsive design of the index page starts */
+@media only screen and (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+@media only screen and (max-width: 768px){
+    header nav{
+        top: 100%;
+        left: -100%;
+        position: absolute;
+        width: 50vw;
+        z-index: 1000;
+        height: 100vh;
+        background: var(--blue-main);
+        transition: all .3s ease-in-out;
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav a{
+        display: block;
+        padding: 1.5rem 2.2rem;
+    }
+    header .menu{
+        display: initial;
+        font-size: 2.5rem;
+        color: #fff;
+        margin-right: 4rem;
+        padding: .5rem;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 500px){
+    header nav{
+        width: 75vw;
+    }
+}
 footer{
     background: #D5D5D5;
     margin-top: 5.3rem;
