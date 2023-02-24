@@ -55,7 +55,7 @@ section{
 .box-container .box{
     border: .2rem solid #c3c1c1;
     border-radius: 1rem;
-    width: 36.5rem;
+    width: 100%;
     padding: 1rem;
     box-shadow: .8rem .8rem 1rem rgba(0,0,0,.16);
 }
@@ -107,7 +107,7 @@ header .menu{
 .home{
     width: 100%;
     display: flex;
-    gap: 10rem;
+    justify-content: space-between;
     margin-top: 15rem;
     position: relative;
 }
@@ -122,7 +122,7 @@ header .menu{
     border-radius: 1rem;
 }
 .home .content{
-    width: 40%;
+    width: 48%;
 }
 .home .content h2{
     font-size: 2.4rem;
@@ -511,47 +511,6 @@ form .submit button{
     height: 60rem;
     margin-top: 4rem;
 }
-/* Responsive design of the index page starts */
-@media only screen and (max-width: 1200px){
-    html{
-        font-size: 55%;
-    }
-    section{
-        padding: 2rem;
-    }
-}
-@media only screen and (max-width: 768px){
-    header nav{
-        top: 100%;
-        left: -100%;
-        position: absolute;
-        width: 50vw;
-        z-index: 1000;
-        height: 100vh;
-        background: var(--blue-main);
-        transition: all .3s ease-in-out;
-    }
-    header nav.active{
-        left: 0;
-    }
-    header nav a{
-        display: block;
-        padding: 1.5rem 2.2rem;
-    }
-    header .menu{
-        display: initial;
-        font-size: 2.5rem;
-        color: #fff;
-        margin-right: 4rem;
-        padding: .5rem;
-        cursor: pointer;
-    }
-}
-@media only screen and (max-width: 500px){
-    header nav{
-        width: 75vw;
-    }
-}
 footer{
     background: #D5D5D5;
     margin-top: 5.3rem;
@@ -621,4 +580,265 @@ footer .credit{
 }
 footer .credit span{
     color: var(--blue-main);
+}
+/* Responsive design of the index page starts */
+@media only screen and (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        margin-top: 8rem;
+        gap: 5rem;
+    }
+    .home .image{
+        padding-left: 4rem;
+    }
+    hr{
+        width: 98%;
+        margin: 2rem auto;
+    }
+}
+@media only screen and (max-width: 768px){
+    header nav{
+        top: 100%;
+        left: -100%;
+        position: absolute;
+        width: 50vw;
+        z-index: 1000;
+        height: 100vh;
+        background: var(--blue-main);
+        transition: all .3s ease-in-out;
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav a{
+        display: block;
+        padding: 1.5rem 2.2rem;
+    }
+    header .menu{
+        display: initial;
+        font-size: 2.5rem;
+        color: #fff;
+        margin-right: 4rem;
+        padding: .5rem;
+        cursor: pointer;
+    }
+    .home{
+        flex-wrap: wrap;
+    }
+    .home .image{
+        width: 100%;
+        padding-left: 0;
+    }
+    .home .content{
+        width: 100%;
+    }
+    .home .content p {
+        margin: 2rem 0 3rem 0;
+    }
+    .home .prev-btn{
+        left: 80%;
+        right: 5rem;
+        top: 75%;
+    }
+    .home .next-btn{
+        right: 5rem;
+        top: 75%;
+    }
+    .box-container{
+        margin-top: 2rem;
+    }
+    /* Responsive styling for the services page */
+    .banner {
+        height: 20rem;
+        margin-bottom: 2rem;
+    }
+    .banner h2 {
+        position: absolute;
+        z-index: 100;
+        font-size: 3rem;
+    }
+    .meal-services p {
+        font-size: 1.4rem;
+    }
+    .box-container .box p {
+        font-size: 1.4rem;
+    }
+    /* Responsive styling of the branches page */
+    .branch-container {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 4rem;
+    }
+    .branch-container .image {
+        width: 100%;
+        height: 40rem;
+    }
+    .branch-container .content {
+        width: 100%;
+    }
+    .branch-line {
+        margin-top: 2rem;
+    }
+    /* Responsive styling of the contact page */
+    .contact-description .contact-details .contact-form {
+        font-size: 1.4rem;
+    }
+    form .submit button {
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (max-width: 500px){
+    header nav{
+        width: 75vw;
+    }
+    .home .image{
+        height: 25rem;
+    }
+    .home .content h2{
+        font-size: 1.8rem;
+    }
+    .home .content p{
+        margin: 2rem 0 3rem 0;
+        font-size: 1.2rem;
+    }
+    .btn {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+    }
+    .home .prev-btn{
+        left: 70%;
+        right: 5rem;
+        top: 60%;
+    }
+    .home .next-btn{
+        right: 5rem;
+        top: 60%;
+    }
+    .top-services h2{
+        font-size: 1.6rem;
+        padding-bottom: 1.5rem;
+    }
+    .box-container .box h3{
+        font-size: 1.6rem;
+    }
+    .box-container .box p{
+        font-size: 1.2rem;
+        line-height: initial;
+        padding: 0;
+    }
+    .top-services .btn {
+        display: inline-block;
+        margin-top: 2rem;
+    }
+    /* Responsive styling for the services page */
+    .meal-services h2 {
+        font-size: 1.8rem;
+    }
+    .meal-services p {
+        margin: 2rem 0 3rem 0;
+        font-size: 1.2rem;
+        line-height: initial;
+    }
+    .box-container .box h3 {
+        font-size: 1.6rem;
+    }
+    .meal-services .box-container .box p {
+        padding: 0 !important;
+        line-height: initial;
+    }
+    /* Responsive styling of the branches page */
+    .branch-second h2 {
+        font-size: 1.8rem;
+    }
+    .branch-first p{
+        font-size: 1.2rem;
+        line-height: initial;
+    }
+    .branch-second p {
+        font-size: 1.2rem;
+        line-height: initial;
+    }
+    .branch-container .image {
+        height: 25rem;
+    }
+    /* Responsive styliing of the about us page */
+    .about p, .team p, .feedback p, .contact p {
+        font-size: 1.2rem;
+        line-height: initial;
+    }
+    hr {
+        width: 98%;
+        margin: 1rem auto;
+    }
+    .team h2 {
+        font-size: 1.6rem;
+    }
+    .team .box .name {
+        font-size: 1.6rem;
+    }
+    .team .box .details {
+        font-size: 1.2rem;
+        line-height: initial;
+        padding: 2rem 0 0 0;
+    }
+    .feedback h2 {
+        font-size: 1.6rem;
+    }
+    .feedback .rating-box .name {
+        font-size: 1.6rem;
+    }
+    .feedback .rating-box i {
+        font-size: 1.3rem;
+    }
+    .feedback .box .details {
+        font-size: 1.2rem;
+        line-height: initial;
+        padding: 0;
+    }
+    /* Responsive styling of the contact page */
+    .contact-description h2 {
+        font-size: 1.6rem;
+    }
+    .contact-description .contact-details p {
+        font-size: 1.2rem;
+        line-height: initial;
+    }
+    .contact-description .contact-details .contact-form .input-row {
+        flex-wrap: wrap;
+    }
+    .contact-description .contact-details .contact-form .input-row .input-box {
+        width: 100%;
+        height: 5rem;
+    }
+    form .submit button {
+        width: 20rem;
+        font-size: 1.6rem;
+    }
+    /* Responsive styling of the footer */
+    footer {
+        margin-top: 1.2rem;
+        padding-top: 2.2rem;
+    }
+    footer .footer-link-container .link-box h3 {
+        font-size: 1.6rem;
+        color: var(--blue-main);
+    }
+    footer .footer-link-container .link-box a, footer .footer-link-container .link-box p {
+        margin: 2rem 0;
+        font-size: 1.2rem;
+    }
+    footer .footer-link-container .link-box .social-media-icons {
+        gap: 1.5rem;
+    }
+    footer .footer-link-container .link-box .social-media-icons a {
+        font-size: 1.4rem;
+    }
+    footer .credit {
+        font-size: 1.2rem;
+    }
 }
