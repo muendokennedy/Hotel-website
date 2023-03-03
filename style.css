@@ -272,7 +272,7 @@ hr{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 30rem;
+    height: fit-content;
 }
 .branch-container .image{
     width: 45%;
